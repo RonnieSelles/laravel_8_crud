@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
@@ -16,8 +17,11 @@ class ProjectController extends Controller
     {
         $projects = Project::latest()->paginate(5);
 
-        return view('projects.index', compact('projects'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        if(Auth::check()){
+            return view('projects.index', compact('projects'))
+                ->with('i', (request()->input('page', 1) - 1) * 5);
+        }
+
     }
 
     /**
