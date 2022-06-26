@@ -43,22 +43,20 @@
                         <ul>
                             <li>
                                 <a href="{{ route('projects.show', $project->id) }}" title="show">
-                                    <i class="fas fa-eye text-success  fa-lg"></i>
+                                    <i class="fas fa-eye text-success  fa-lg">show</i>
                                 </a>
                             </li>
                             <li>
-
                                 <a href="{{ route('projects.edit', $project->id) }}">
-                                    <i class="fas fa-edit  fa-lg"></i>
+                                    <i class="fas fa-edit  fa-lg">edit</i>
 
                                 </a>
                             </li>
                             <li>
                                 @csrf
                                 @method('DELETE')
-
                                 <button type="submit" title="delete" style="border: none; background-color:transparent;">
-                                    <i class="fas fa-trash fa-lg text-danger"></i>
+                                    <i class="fas fa-trash fa-lg text-danger">delete</i>
 
                                 </button>
                             </li>
