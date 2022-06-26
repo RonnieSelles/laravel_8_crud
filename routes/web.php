@@ -24,7 +24,7 @@ Route::resource('projects', ProjectController::class);
 // Route::resource('projects', 'ProjectController');
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
-Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
+Route::get('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 Route::get('registration', [AuthController::class, 'registration'])->name('register');
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
 Route::resource('dashboard', ProjectController::class);
