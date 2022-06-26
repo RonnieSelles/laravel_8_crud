@@ -10,8 +10,8 @@
 <div class="container mt-5 pt-5">
     <div class="alert alert-danger text-center">
         <h2 class="display-3">404</h2>
-        <p class="display-5">Oops! Something is wrong.</p>
-        <a class="nav-link" href="{{ route('dashboard') }}">Back to dashboard</a>
+        <p class="display-5">Oops! the page you are looking for does not exist</p>
+        <a class="nav-link" href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Back to dashboard</a>
     </div>
 </div>
 </body>

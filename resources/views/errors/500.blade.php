@@ -10,7 +10,8 @@
 <div class="container mt-5 pt-5">
     <div class="alert alert-danger text-center">
         <h2 class="display-3">500</h2>
-        <p class="display-5">Oops! Something is wrong.</p>
+        <p class="display-5">Sorry! Internal server error</p>
+        <a class="nav-link" href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Back to dashboard</a>
     </div>
 </div>
 </body>
