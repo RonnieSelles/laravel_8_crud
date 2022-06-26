@@ -11,6 +11,7 @@
     <div class="alert alert-danger text-center">
         <h2 class="display-3">404</h2>
         <p class="display-5">Oops! Something is wrong.</p>
+        <a class="nav-link" href="{{ route('dashboard') }}">Back to dashboard</a>
     </div>
 </div>
 </body>
