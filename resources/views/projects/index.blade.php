@@ -40,22 +40,29 @@
                 <td>
                     <form action="{{ route('projects.destroy', $project->id) }}" method="POST">
 
-                        <a href="{{ route('projects.show', $project->id) }}" title="show">
-                            <i class="fas fa-eye text-success  fa-lg"></i>
-                        </a>
+                        <ul>
+                            <li>
+                                <a href="{{ route('projects.show', $project->id) }}" title="show">
+                                    <i class="fas fa-eye text-success  fa-lg"></i>
+                                </a>
+                            </li>
+                            <li>
 
-                        <a href="{{ route('projects.edit', $project->id) }}">
-                            <i class="fas fa-edit  fa-lg"></i>
+                                <a href="{{ route('projects.edit', $project->id) }}">
+                                    <i class="fas fa-edit  fa-lg"></i>
 
-                        </a>
+                                </a>
+                            </li>
+                            <li>
+                                @csrf
+                                @method('DELETE')
 
-                        @csrf
-                        @method('DELETE')
+                                <button type="submit" title="delete" style="border: none; background-color:transparent;">
+                                    <i class="fas fa-trash fa-lg text-danger"></i>
 
-                        <button type="submit" title="delete" style="border: none; background-color:transparent;">
-                            <i class="fas fa-trash fa-lg text-danger"></i>
-
-                        </button>
+                                </button>
+                            </li>
+                        </ul>
                     </form>
                 </td>
             </tr>
